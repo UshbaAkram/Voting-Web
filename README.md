@@ -17,11 +17,12 @@ This Voting Website is a web-based application that allows users to register, lo
 Follow these steps to set up and run the project locally.
 
 # Prerequisites
-Node.js
-MongoDB
+- Node.js
+- MongoDB
 # Steps
 - Clone the Repository
- git clone https://github.com/UshbaAkram/voting-website.git
+ git clone https://github.com/UshbaAkram/voting-web.git
+
 cd voting-website
 
 - Install Dependencies
@@ -36,34 +37,35 @@ Open your web browser and go to http://localhost:8000
 
 
 # Usage
-User Accounts
-Register a New User
+## User Accounts
+- Register a New User
 
 Go to the registration page and fill in the required details to create a new user account.
 
-Login as a User
+- Login as a User
 
 Use your credentials to log in and access the voting functionalities.
 
-Admin Account
+## Admin Account
 To explore the admin functionalities, use the following test admin account credentials:
 
 Username: ushbaakram@gmail.com
+
 Password & CNIC : 123123
-Admin Dashboard
+- Admin Dashboard
 Create Candidate
 
 Navigate to the admin dashboard and go to the "Create Candidate" section to add new candidates.
 
-Update Candidate
+- Update Candidate
 
 In the admin dashboard, go to the "Update Candidate" section to edit existing candidates.
 
-Delete Candidate
+- Delete Candidate
 
 In the admin dashboard, go to the "Delete Candidate" section to remove candidates.
 
-View Live Results
+- View Live Results
 
 Access the "Live Results" page to see the current voting results in real-time.
 
