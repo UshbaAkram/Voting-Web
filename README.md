@@ -22,11 +22,12 @@ Follow these steps to set up and run the project locally.
 # Steps
 - Clone the Repository
 
-  * git clone https://github.com/UshbaAkram/voting-web.git*
+  * git clone https://github.com/UshbaAkram/voting-web.git
 
-   *cd voting-website*
+   * * cd voting-website*
 
 - Install Dependencies
+  
 *npm install*
 
 - Run the Application
