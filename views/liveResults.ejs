@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Voting Results</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Live Voting Results</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Party</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody id="resultsTable">
+        <% candidates.forEach(candidate => { %>
+          <tr>
+            <td><%= candidate.name %></td>
+            <td><%= candidate.party %></td>
+            <td><%= candidate.voteCount %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <button class="btn" onclick="window.location.reload()">Refresh</button>
+  </div>
+  <script>
+    setInterval(() => {
+      fetch('/liveResults')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('resultsTable').innerHTML = new DOMParser().parseFromString(html, 'text/html').querySelector('#resultsTable').innerHTML;
+        });
+    }, 30000); // Refresh every 30 seconds
+  </script>
+</body>
+</html>

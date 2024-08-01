@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Candidate</title>
+</head>
+<body>
+  <h1>Update Candidate</h1>
+  
+  <!-- Form to select candidate and update their details -->
+  <form action="/updateCandidate" method="POST">
+    <label for="candidate">Select Candidate:</label>
+    <select name="id" id="candidate">
+      <% candidates.forEach(candidate => { %>
+        <option value="<%= candidate._id %>"><%= candidate.name %> - <%= candidate.party %></option>
+      <% }) %>
+    </select>
+    <br><br>
+    
+    <label for="name">New Name:</label>
+    <input type="text" name="name" id="name">
+    <br><br>
+    
+    <label for="party">New Party:</label>
+    <input type="text" name="party" id="party">
+    <br><br>
+    
+    <button type="submit">Update Candidate</button>
+  </form>
+</body>
+</html>

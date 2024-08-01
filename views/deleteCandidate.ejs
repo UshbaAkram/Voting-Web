@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Candidate</title>
+</head>
+<body>
+  <h1>Delete Candidate</h1>
+  
+  <!-- Form to select candidate and delete them -->
+  <form action="/deleteCandidate" method="POST">
+    <label for="candidate">Select Candidate to Delete:</label>
+    <select name="id" id="candidate">
+      <% candidates.forEach(candidate => { %>
+        <option value="<%= candidate._id %>"><%= candidate.name %> - <%= candidate.party %></option>
+      <% }) %>
+    </select>
+    <br><br>
+    
+    <button type="submit">Delete Candidate</button>
+  </form>
+</body>
+</html>
