@@ -22,15 +22,16 @@ Follow these steps to set up and run the project locally.
 # Steps
 - Clone the Repository
 
-  * git clone https://github.com/UshbaAkram/voting-web.git
+  *git clone https://github.com/UshbaAkram/voting-web.git*
 
-   * * cd voting-website*
+    *cd voting-website*
 
 - Install Dependencies
   
 *npm install*
 
 - Run the Application
+  
 *npm run dev*
 
 - Access the Application
@@ -51,9 +52,9 @@ Use your credentials to log in and access the voting functionalities.
 ## Admin Account
 To explore the admin functionalities, use the following test admin account credentials:
 
-Username: ushbaakram@gmail.com
+Username: *ushbaakram@gmail.com*
 
-Password & CNIC : 123123
+Password & CNIC : *123123*
 - Admin Dashboard
 Create Candidate
 
