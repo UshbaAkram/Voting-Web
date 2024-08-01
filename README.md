@@ -32,7 +32,7 @@ Follow these steps to set up and run the project locally.
 
 - Run the Application
   
-*npm run dev*
+*node index*
 
 - Access the Application
 
